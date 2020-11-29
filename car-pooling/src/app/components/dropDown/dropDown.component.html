@@ -1,0 +1,32 @@
+<a
+  class="hover:text-gray-600 text-gray-800 px-3 py-2 flex items-center text-xs uppercase font-bold"
+  href="#pablo"
+  (click)="toggleDropdown($event)"
+  #btnDropdownRef
+>
+<li class="flex items-center">
+  <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+    <img src="https://fanfare-makabes.fr/wp-content/uploads/2015/09/user-image.jpg" alt="" class="img-fluid rounded-circle z-depth-0" style="height: 35px; border-radius: 40px; margin-top: 10px;">
+  </a>
+</li>
+
+</a>
+<div
+  class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+  [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
+  #popoverDropdownRef
+>
+  <a
+    [routerLink]="['/profile']"
+    class="text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
+  >
+    My Account
+  </a>
+  <a
+    [routerLink]="['/login']"
+    class="text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
+  >
+    LogOut
+  </a>
+  
+</div>
